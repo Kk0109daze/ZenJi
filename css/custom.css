@@ -200,7 +200,7 @@ header nav a.active {
   padding: var(--spacing8x3);
 }
 
-#hero-image h1 {
+#boxes-1-image {
   text-align: center;
   color: var(--white);
   margin: 0; 
@@ -237,8 +237,25 @@ header nav a.active {
 
 /* Callout */
 
-.callout {
-  background: var(--grey);
+/* Callout layout (keep if already defined) */
+.callout div{
+  padding: var(--spacing8x8);
+}
+
+/* Left blue box (image container) */
+.callout-image{
+  width: 100%;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Three callout boxes using different images */
+.callout-image.img-1{ background-image: url("../img/boxes-1.jpg"); }
+.callout-image.img-2{ background-image: url("../img/boxes-2.jpeg"); }
+.callout-image.img-3{ background-image: url("../img/boxes-3.jpg"); }
+
 }
 
 .callout div {
