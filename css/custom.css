@@ -200,7 +200,7 @@ header nav a.active {
   padding: var(--spacing8x3);
 }
 
-#boxes-1-image {
+#boxes-image {
   text-align: center;
   color: var(--white);
   margin: 0; 
@@ -237,25 +237,13 @@ header nav a.active {
 
 /* Callout */
 
-/* Callout layout (keep if already defined) */
-.callout div{
-  padding: var(--spacing8x8);
-}
-
-/* Left blue box (image container) */
-.callout-image{
+.callout {
+  background:url("../img/boxes 1.jpg") no-repeat center center;
+  backgroud-size: cover;
   width: 100%;
+  height: 100%;
   min-height: 300px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-/* Three callout boxes using different images */
-.callout-image.img-1{ background-image: url("../img/boxes-1.jpg"); }
-.callout-image.img-2{ background-image: url("../img/boxes-2.jpeg"); }
-.callout-image.img-3{ background-image: url("../img/boxes-3.jpg"); }
-
+  overflow:hidden; 
 }
 
 .callout div {
@@ -282,51 +270,38 @@ section p + a.button {
 }
 
 
-/* Footer Styles */
-footer {
-  width: 100%;
-  background: var(--primary-100);
-  color: var(--white);
-  padding: 40px 20px 20px;
-  /* Try customizing: background gradients, text alignment, etc. */
+/* Final full-screen background section */
+#footer-image {
+  background: url('../img/footer-image.png') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 4rem;
+  color: white;
+  position: relative;
 }
 
-footer img {
-  width: 160px;
+/* dark overlay for readability */
+#footer-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
 }
 
-footer hr {
-  margin: 10px 0 20px;
-  border: none;
-  border-bottom: 1.5px solid var(--primary-25);
-}
-
-footer a, footer p {
-  color: var(--secondary-color);
-  font-size: 12px;
-}
-
-footer nav a { 
-  font-size: 14px;
-}
-
-footer nav a + a {
-  margin-left: 40px;
-}
-
-footer nav, footer p {
-  text-align: right;
-}
-
-/* Mobile Footer Adjustments */
-@media only screen and (max-width: 799px) {
-  footer nav {
-    text-align: center;
-  }
-
-  footer img {
-    margin: 0 auto;
-  }
+#footer-image > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* ==========================================================================
