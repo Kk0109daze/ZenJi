@@ -37,7 +37,21 @@ Experiment with colors, typography, spacing, and component styles.
   --grey: #EBEFF4;
   --white: #fff;
   
+  
   /* You can add more custom colors here */
+  --black:#000000;
+  --orange: #FFE7D9;
+  --yellow: #FFCC00;
+  --brown:#E7C39D;
+  --darkbrown:#FFBE93;
+  --lightyellow:#FFFCDE;
+  --darkorange:#AC5726;
+  --lightorange:#FF8534;
+  --lightred:#FF4D00;
+  --greyred:#C3A8A8;
+
+
+
 
 }
 
@@ -50,19 +64,29 @@ Experiment with colors, typography, spacing, and component styles.
 
 body {
   color: var(--primary-80);
+  background-color: var(--black);
   /* font-family is set in framework.css but you can override it here if needed */
 }
 
 /* Heading Styles - Customize sizes, colors, spacing */
 h1, h2, h3, h4, h5, h6 { 
   line-height: 1.1;
-  color: var(--primary-80);
+  color: var(--greyred);
   /* Add your custom heading styles here */
+  font-family: "Manuale", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
 
 h1 { 
   font-size: 90px;
   /* Try adding: font-weight, color, text-transform, etc. */
+  color: var(--orange);
+  font-family: "Manuale", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
 
 h2 { 
@@ -91,8 +115,12 @@ h6 {
 p {
   font-size: 18px;
   line-height: 1.5;
-  color: var(--primary-80);
+  color: var(--brown);
   /* Try adjusting: line-height, letter-spacing, margin-bottom */
+  font-family: "Manuale", serif;
+  font-optical-sizing: auto;
+  font-weight: <200>;
+  font-style: normal;
 }
 
 img + h4,
@@ -136,10 +164,12 @@ a:hover {
 /* Button Styles - Customize your call-to-action buttons */
 a.button {
   border-radius: 50px;
-  border: 2px solid var(--primary-80);
+  background-color: var(--lightred);
+  border: 2px solid var(--lightred);
+  color: var(--white);
   padding: 10px 20px 8px;
   display: inline-block;
-  margin-top: var(--spacing8x2);
+  margin-top: var(--lightred);
   /* Try adding: background-color, box-shadow, transform on hover, etc. */
 }
 
@@ -311,7 +341,7 @@ section p + a.button {
 .dark-bg-wrapper h2,
 .dark-bg-wrapper h3,
 .dark-bg-wrapper h4,
-.dark-bg-wrapper p {
+.light-bg-wrapper {
   color: var(--white);
 }
 
